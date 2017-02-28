@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 void compareArrays(int arr1[], int arr2[], int len1, int len2, int output[]){
-	int i, j, k,s;
-	j, k,s = 0;
+	int i, j, k;
+	j = k = 0;
 	
-	for (i = 0; i < len1+len2; i++){
+	for (i = 0; i < (len1+len2); i++){
 		if (j < len1 && k < len2){
 			if(arr1[j] < arr2[k]){
 				output[i] = arr1[j];
@@ -28,31 +28,25 @@ void compareArrays(int arr1[], int arr2[], int len1, int len2, int output[]){
 
 int main(){
 	int maxlength = 100;
-	int alength, blength, r, s = 0;
+	int alength, blength, i;
 	int a[maxlength], b[maxlength];
-	int i;
 	
-  printf("Type elements of A separated by spaces (type 'end' to stop): ");
-  while(scanf("%d", &a[r]) == 1) {
-    r++;
-  }
-  scanf("%*s");
+	alength = blength = 0;
 	
 	printf("Type elements of A separated by spaces (type 'end' to stop): ");
-	  while(scanf("%d", &a[s]) == 1) {
-    s++;
-  }
-  scanf("%*s");
-
-	while (a[alength] != '\0'){
-		alength++;
+	while(scanf("%d", &a[alength]) == 1) {
+    	alength++;
 	}
+	scanf("%*s");
 	
-	while (b[blength] != '\0'){
+	printf("Type elements of A separated by spaces (type 'end' to stop): ");
+	while(scanf("%d", &b[blength]) == 1) {
 		blength++;
-	}	
+  	}
+  	
+  	scanf("%*s");
 	
-	int output[alength + blength];
+	int output[alength + blength-1];
 	compareArrays(a, b, alength, blength, output);
 	
 	printf("Result: ");

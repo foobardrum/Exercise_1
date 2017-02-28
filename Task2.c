@@ -10,25 +10,26 @@ int main(){
 	i = 0;
 	
 	printf("Values of A separated by spaces (non-number to stop): ");
-	while (scanf("%f", &value) == '1') {
+	while (scanf("%lf", &value) == 1) {
 	  input[i] = value;
 	  i++;
+	  printf("%d", i);
 	}
 	
 	for(j=0; j <= i; j++){
 		sum += input[j];
 	}
 	
-	avg = sum/(j+1);
+	avg = sum/i;
 	closest = input[0];
 	
-	for (j=0; j <= i; j++){
+	for (j=1; j <= i; j++){
 		diff =  fabs(closest-avg);
 		if (fabs(input[j]-avg) < diff){
 			closest = input[j];	
 		}
 	}
-	printf("Average : %f\n Closest element : %f", avg, closest);
+	printf("Average : %lf\n Closest element : %lf", avg, closest);
 	
 	return 0;
 }
