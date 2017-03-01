@@ -12,21 +12,20 @@ double average(double A[], int n, int i){
 
 int main(){
 	int n,i;
-	
-	//init A
-	double A[5] = {1,2,3,4,5};
+	double a[100];
 	double result;
 	
-	//get length of A[]
-	i = 0;
-	while (A[i] != '\0'){
+	printf("Type elements of A separated by spaces (type 'end' to stop): ");
+		i = 0;
+		while(scanf("%lf", &a[i]) == 1) {
 		i++;
 	}
-	// A[i] == '\0' -> n = i-1
-	n = i-1;
+	n = i;
+	scanf("%*s");
+
+	result = average(a, n, 0);
+	printf("%lf", result);
 	
-	result = average(A, n, 0);
-	
-	printf("%f", result);
+	return 0;
 }
 
