@@ -24,7 +24,7 @@ int main(){
 	scanf("%*s");
 
 	result = average(a, n, 0);
-	printf("%lf", result);
+	printf("Average: %lf", result);
 	
 	return 0;
 }

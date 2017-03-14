@@ -24,7 +24,7 @@ int main() {
 	scanf("%*s");
 	
 	int result = sum(a, 0, n);
-	printf("sum: %d", result);
+	printf("Sum: %d", result);
 	
 	return 0;
 }

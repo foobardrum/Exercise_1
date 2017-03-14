@@ -13,7 +13,6 @@ int main(){
 	while (scanf("%lf", &value) == 1) {
 	  input[i] = value;
 	  i++;
-	  printf("%d", i);
 	}
 	
 	for(j=0; j <= i; j++){
@@ -29,7 +28,7 @@ int main(){
 			closest = input[j];	
 		}
 	}
-	printf("Average : %lf\n Closest element : %lf", avg, closest);
+	printf("Average : %lf\nClosest element : %lf", avg, closest);
 	
 	return 0;
 }
